@@ -48,8 +48,9 @@
                 </path>
               </g>
             </svg>
-            <input class="input" type="search" placeholder="Search" />
+            <input class="input" type="text" v-model="stext" placeholder="Search" />
           </div>
+          <button class="buttonsearch" @click="searchProduct()">Search</button>
         </div>
       </div>
     </div>
@@ -130,6 +131,7 @@ export default {
 
 /* Search */ 
 .group {
+  margin-right:  6px;
   display: flex;
   line-height: 28px;
   align-items: center;
@@ -170,5 +172,36 @@ input:hover {
   width: 1rem;
   height: 1rem;
 }
+/* button search */ 
+.buttonsearch {
+  margin-right: 25px;
+  --bg: #54C392;
+  --text-color: #fff;
+  position: relative;
+  width: 100px;
+  border: none;
+  background: var(--bg);
+  color: var(--text-color);
+  padding: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.2s;
+  border-radius: 5px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+  box-shadow: #15B392 0px 7px 2px, #000 0px 8px 5px;
+  margin-bottom: 7px; 
+  font-size: 90%;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+button:active {
+  top: 4px;
+  box-shadow: #54C392 0px 3px 2px,#000 0px 3px 5px;
+}
+
 
 </style>
